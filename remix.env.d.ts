@@ -1,8 +1,3 @@
-/// <reference types="@remix-run/dev" />
-/// <reference types="@shopify/remix-oxygen" />
-/// <reference types="@shopify/oxygen-workers-types" />
-
-import type {WithCache} from '@shopify/hydrogen';
 import type {Storefront} from '~/lib/type';
 import type {HydrogenSession} from '~/lib/session.server';
 
@@ -10,7 +5,7 @@ declare global {
   /**
    * A global `process` object is only available during build to access NODE_ENV.
    */
-  const process: {env: {NODE_ENV: 'production' | 'development'}};
+  const process: {env: {NODE_ENV: 'production' | 'development'} & Env};
 
   /**
    * Declare expected Env parameter in fetch handler.
